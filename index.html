@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            text-align: justify;
+            margin: 0px 200px;
+            background-color: yellow;
+        }
+         .one{
+            margin: 80px 0px;
+         }
+         .para{
+            background-color: black;
+            padding: 50px 50px;
+            color: white;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            line-height: 30px;
+         }
+         .para1{
+            font-size:18px;
+         }
+         button{
+            background-color: black;
+            border-color: black;
+            padding: 10px 30px;
+            color: white;
+            font-size: 15px;
+            border-radius: 50px;
+            
+         }
+
+    </style>
+    
+</head>
+<body>
+  <h1>18.3.24</h1>
+    <h1 style="text-align: center;">KEY WORDS</h1>
+    <div class="one">
+        <h1>VAR:Declares a variable</h1>
+        <p class="para1">
+            In JavaScript, the var keyword is used to declare variables. However, it's important to note that var has some quirks and behaviors that may lead to unexpected results, especially when compared to the newer variable declaration keywords introduced in ES6 (ECMAScript 2015), such as let and const.</p>
+        <p class="para" id="first" style="display: none;"> 1.Function Scope: Variables declared with var are function-scoped. This means that they are accessible anywhere within the function in which they are declared, regardless of block scopes (like if statements or loops). <br><br>
+
+        2. Hoisting: Variables declared with var are hoisted to the top of their function or global scope. This means that the variable declaration is effectively moved to the top of its scope during the compilation phase, although its assignment (if any) remains in place. This can sometimes lead to unexpected behavior, especially for those unfamiliar with the concept. <br><br>
+            
+        3. No Block Scope: Unlike let and const, var does not have block-level scope. This means that variables declared with var inside blocks (like if statements or loops) are accessible outside of those blocks. <br><br>
+            
+        4.Re-declaration: Variables declared with var can be re-declared within the same scope without causing an error. This can sometimes lead to unintended consequences and bugs.</p>
+        <button type="button" onclick="var_show()" >
+           explore more
+        </button>
+        <button type="button" onclick="var_hide()">
+            close
+        </button>
+    </div>
+    <div class="one">
+        <h1>LET:Declares a Block variable</h1>
+        <p class="para1">
+            In JavaScript, the let keyword was introduced in ECMAScript 2015 (ES6) to provide block-scoped variable declarations. Unlike the var keyword, which has function-level scope, let allows variables to be scoped to the block in which they are defined, such as within an if statement or a loop. This behavior helps prevent certain bugs and unintended side effects that can occur with var.</p>
+        <p class="para" id="second" style="display: none;"> 1.Block Scope: Variables declared with let are scoped to the nearest enclosing block (i.e., any pair of {}). This means that they are only accessible within that block and any nested blocks. <br><br>
+
+            2.No Hoisting: Variables declared with let are not hoisted to the top of their scope. They are only accessible after the declaration statement has been executed. This helps prevent the "temporal dead zone" that can occur with var.<br><br>
+            
+            3.No Re-declaration: Unlike var, you cannot re-declare a variable with the same name within the same block scope using let. Attempting to do so will result in a syntax error. <br><br>
+            
+            4.Initialization: Variables declared with let can be declared without being immediately initialized. They will be initialized with the value undefined until they are assigned a value. <br><br>
+            
+            5.Can be Mutable: Unlike const, variables declared with let can be reassigned a new value after declaration.</p>
+            <button type="button" onclick="let_show()" >
+                explore more
+             </button>
+             <button type="button" onclick="let_hide()">
+                 close
+             </button>
+    </div>
+    <div class="one">
+        <h1>CONST:Declares a Block Constant</h1>
+        <p class="para1">
+            In JavaScript, the const keyword was introduced in ECMAScript 2015 (ES6) alongside let to declare constants. Constants are variables whose values cannot be reassigned after initialization. They are useful for declaring values that should remain constant throughout the execution of a program.</p>
+
+        <p class="para" id="three" style="display: none;" >
+            1.Constant Value: Variables declared with const must be initialized with a value, and once assigned, their value cannot be changed through reassignment. This means that attempting to assign a new value to a const variable after initialization will result in a syntax error. <br><br>
+
+2.Block Scope: Like let, variables declared with const are block-scoped. They are only accessible within the block in which they are defined, and any nested blocks.<br><br>
+
+3.No Hoisting: const variables are not hoisted to the top of their scope, similar to let. They must be declared before they are accessed in the code.<br><br>
+
+4.No Re-declaration: Just like let, you cannot re-declare a variable with the same name within the same block scope using const. Attempting to do so will result in a syntax error.<br><br>
+
+5.Immutable Binding: While the value of a const variable cannot be reassigned, it does not mean that the value itself is immutable. If a const variable holds an object or array, the properties or elements of that object or array can still be mutated.<br><br>
+        </p>
+        <button type="button" onclick="const_show()" >
+            explore more
+         </button>
+         <button type="button" onclick="const_hide()">
+             close
+         </button>
+    </div>
+    
+<script> 
+  function var_show(){
+    document.getElementById("first").style.display="block";
+  }
+  function var_hide(){
+    document.getElementById("first").style.display="none";
+  }
+  function let_show(){
+    document.getElementById("second").style.display="block";
+  }
+  function let_hide(){
+    document.getElementById("second").style.display="none";
+  }
+  function const_show(){
+    document.getElementById("three").style.display="block";
+  }
+  function const_hide(){
+    document.getElementById("three").style.display="none";
+  }
+   
+
+</script>
+</body>
+</html>
