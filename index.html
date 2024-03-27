@@ -220,10 +220,8 @@ function opening(){
 
         document.getElementById("output").innerHTML= name+" "+"you are exxelent";
     }
-    else if(mark<50){
+    else {
         document.getElementById("output").innerHTML= name+" "+"you are fail";
-    }else{
-         document.getElementById("output").innerHTML= name+" "+"Please enter the mark";
     }
 } 
 
@@ -236,11 +234,8 @@ function fit(){
     let weight=prompt("please enter your weight");
     if(age>18 && height>6 && weight>50){
         document.getElementById("outpit").innerHTML= "you are eligeble";
-    }else if(age<18 && height<6 && weight<50){
+    }else{
         document.getElementById("outpit").innerHTML= "you are not eligeble";
-    }
-    else{
-         document.getElementById("outpit").innerHTML= "Please fill all the areas";
     }
 }
 
