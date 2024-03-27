@@ -1,4 +1,30 @@
 
+
+
+function var_show(){
+    document.getElementById("first").style.display="block";
+  }
+  function var_hide(){
+    document.getElementById("first").style.display="none";
+  }
+  function let_show(){
+    document.getElementById("second").style.display="block";
+  }
+  function let_hide(){
+    document.getElementById("second").style.display="none";
+  }
+  function const_show(){
+    document.getElementById("three").style.display="block";
+  }
+  function const_hide(){
+    document.getElementById("three").style.display="none";
+  }
+
+
+
+
+
+
 function opening(){
     let name = prompt("please enter your name");
     let mark = prompt("please enter your mark");
